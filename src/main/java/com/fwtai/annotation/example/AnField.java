@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AnField{
 
-    String value() default "";//todo 如果只有一个成员参数,一般参数名为 value
+    String value() default "";//注解的参数 todo 如果只有一个成员参数,一般参数名为 value
 }
