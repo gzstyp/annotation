@@ -2,7 +2,7 @@ package com.fwtai.annotation.example;
 
 public final class Member{
 
-    @AnField(name = "kid")
+    @AnField("kid")//todo 如果只有一个成员参数,一般参数名为 value
     private String id;
 
     private String name;

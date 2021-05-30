@@ -31,7 +31,7 @@ public final class Annotaions{
             final boolean present = field.isAnnotationPresent(AnField.class);
             if(present){
                 final AnField table = field.getAnnotation(AnField.class);
-                System.out.println(field.getName() + ":"+table.name());
+                System.out.println(field.getName() + ":"+table.value());//todo 如果只有一个成员参数,一般参数名为 value
             }else{
                 System.out.println(field.getName() + ",该属性没有自定义注解");
             }
