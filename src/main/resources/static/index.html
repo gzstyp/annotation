@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反射实现表单封装</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        a:link,a:visited,a:hover,a:active{
+            text-decoration: none;
+            outline:none;
+        }
+        input{
+            height:34px;
+            line-height:34px;
+            padding:0 2px;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+学习自定义注解annotation,java反射实现表单封装<br/>
+    <form action="/user/register" method="post">
+        账号：<input name="name" placeholder="账号"/><br/>
+        密码：<input type="password" name="password" placeholder="密码"/><br/>
+        年龄：<input name="age" placeholder="年龄" oninput="value=value.replace(/[^\d]/g,'')"/><br/>
+        <button type="submit" style="padding:4px 8px">提交</button>
+    </form>
+</body>
+</html>
