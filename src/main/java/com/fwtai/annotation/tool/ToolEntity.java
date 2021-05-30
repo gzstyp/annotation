@@ -11,38 +11,33 @@ public final class ToolEntity{
             final Object object = clszz.newInstance();//实例化对象
             for(final Field field : fields){
                 field.setAccessible(true);
-                final Class<?> type = field.getType();
-                final String typeName = type.getSimpleName();
+                final String type = field.getType().getSimpleName();
                 final String name = field.getName();
-                switch (typeName){
+                final String value = request.getParameter(name);
+                switch (type){
                     case "Float":
-                        final String f = request.getParameter(name);
-                        if(f != null && f.length() >0){
-                            field.set(object,Float.parseFloat(f));
+                        if(value != null && value.length() >0){
+                            field.set(object,Float.parseFloat(value));
                         }
                         break;
                     case "Double":
-                        final String d = request.getParameter(name);
-                        if(d != null && d.length() >0){
-                            field.set(object,Double.parseDouble(d));
+                        if(value != null && value.length() >0){
+                            field.set(object,Double.parseDouble(value));
                         }
                         break;
                     case "Integer":
-                        final String integer = request.getParameter(name);
-                        if(integer != null && integer.length() >0){
-                            field.set(object,Integer.parseInt(integer));
+                        if(value != null && value.length() >0){
+                            field.set(object,Integer.parseInt(value));
                         }
                         break;
                     case "Long":
-                        final String l = request.getParameter(name);
-                        if(l != null && l.length() >0){
-                            field.set(object,Long.parseLong(l));
+                        if(value != null && value.length() >0){
+                            field.set(object,Long.parseLong(value));
                         }
                         break;
                     default:
-                        final String string = request.getParameter(name);
-                        if(string != null && string.length() >0){
-                            field.set(object,string);
+                        if(value != null && value.length() >0){
+                            field.set(object,value);
                         }
                         break;
                 }
