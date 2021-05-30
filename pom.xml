@@ -12,7 +12,7 @@
 	<artifactId>annotation</artifactId>
 	<version>v1.0.0</version>
 	<description>
-        学习自定义注解annotation,java反射实现表单封装
+        学习自定义注解annotation,java反射实现表单封装,可以使用反射来弄动态代理
     </description>
 	<properties>
 		<java.version>1.8</java.version>
